@@ -28,6 +28,7 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Credentials", true);
   next();
 });
+app.use(express.static("ecommerce-nextjs/build"));
 
 //app.use(errorHandler);
 app.use("/", userRouter);
